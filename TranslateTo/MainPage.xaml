@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    x:Class="TranslateTo.MainPage">
+
+    <Grid
+        x:Name="container"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Frame
+            x:Name="movingView"
+            BackgroundColor="Blue"
+            WidthRequest="50"
+            HeightRequest="50"
+            VerticalOptions="Start"
+            HorizontalOptions="Start">
+        </Frame>
+        <forms:SKCanvasView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            PaintSurface="OnPaintSurface"
+            EnableTouchEvents="True"
+            Touch="OnTouchAction" />
+    </Grid>
+
+</ContentPage>
